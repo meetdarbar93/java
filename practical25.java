@@ -4,7 +4,7 @@ public class practical25 {
         Task t1 = new Task("Task 1");
         Task t2 = new Task("Task 2");
         Timer t = new Timer();
-        t.schedule(t1,5000);
+        t.schedule(t1,10000);
         t.schedule(t2,1000,2000);
     } 
 }
