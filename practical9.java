@@ -49,26 +49,21 @@ public class practical9 {
                     }
                     break;
                 case 3:
-                    int roll_no;
-                    System.out.println("Enter roll no  : ");
-                    roll_no = Integer.parseInt(br.readLine());
-                    rs = stmt.executeQuery("select * from student where rno =" + roll_no);
-                    System.out.println(" ");
-                    System.out.println("\t\tMarksheet");
-                    if (rs.next()) {
-                        System.out.println("\n");
-                        System.out.println("Roll No : " + rs.getInt(1));
-                        System.out.println("Name : " + rs.getString(2));
-                        System.out.println("Marks of 1 : " + rs.getInt(3));
-                        System.out.println("Marks of 2 : " + rs.getInt(4));
-                        System.out.println("Marks of 3 : " + rs.getInt(5));
-                        System.out.println("Total : " + rs.getInt(6));
-                        System.out.println("Percentahes : " + rs.getInt(7));
-                        System.out.println(" ");
-                    } else {
-                        System.out.println("The marksheet doesn't exsist");
-                    }
-                    break;
+                    System.out.println("Enter roll no : ");
+                        int disp_rno = Integer.parseInt(br.readLine());
+                        sql = "select * from student2 where rno = " + disp_rno;
+                        rs = stmt.executeQuery(sql);
+                        while (rs.next()) {
+                            System.out.println("=====================================================");
+                            System.out.println("\tName :\t" + rs.getString(2) + "\t\tRoll No. :  " + rs.getInt(1));
+                            System.out.println("=====================================================");
+                            System.out.println("\t\tMarks of subject 1 : \t" + rs.getInt(3));
+                            System.out.println("\t\tMarks of subject 2 : \t" + rs.getInt(4));
+                            System.out.println("\t\tMarks of subject 3 : \t" + rs.getInt(5));
+                            System.out.println("-----------------------------------------------------");
+                            System.out.println("\tPercentages : " + rs.getInt(7) + "\tTotal : " + rs.getInt(6));
+                            System.out.println("======================================================");
+                        }
                 case 4:
                     System.out.println("enter roll number : ");
                     roll_no = Integer.parseInt(br.readLine());
