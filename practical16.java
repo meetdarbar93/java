@@ -69,10 +69,41 @@ public class practical16 extends HttpServlet {
                     break;
 
                 case 4:
-                    break;
+                    int temp = val;
+                    int sum = 0, r;
+                    while (temp > 0) {
+                        r = temp % 10;
+                        sum = (sum * 10) + r;
+                        temp /= 10;
+                    }   if (sum == val) {
+                        out.println("<h1>The number " + val + " is palindrome</h1>");
+                    } else {
+                        out.println("<h1>The number " + val + " is not palindrome</h1>");
+                        
+                    }   break;
                 case 5:
-                    break;
+                    int n1 = 0, n2 = 1,n3 , i;
+                    out.println("<h1>" + n1 + "</h1>");
+                    out.println("<h1>" + n2 + "</h1>");
+                    for (i = 2; i <= val; i++) {
+                        n3 = n1 + n2;
+                        out.println("<h1>" + n3 + "</h1>");
+                        n1 = n2;
+                        n2 = n3;
+                    }   break;
                 case 6:
+                    int number = val;
+                    int total = 0, temp1;
+                    while (number != 0) {
+                        temp1 = number % 10;
+                        total = total + (temp1 * temp1 * temp1);
+                        number /= 10;
+                    }   if (total == val) {
+                        out.println("<h1>The number " + val + " is armstrong</h1>");
+                    } else {
+                        out.println("<h1>The number " + val + " is not armstrong</h1>");
+                    }   break;
+                default:
                     break;
             }
             out.println("</body>");
