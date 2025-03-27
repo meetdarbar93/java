@@ -16,10 +16,9 @@ public class practical24 extends Thread {
             }
         } catch (Exception e) {
         };
-    }   
-}
-class prime{
+    } 
     public static void main(String[] args) {
         new practical24().start();
     }
 }
+
