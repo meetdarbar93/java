@@ -92,8 +92,6 @@ public class practical9 {
                     break;
                 case 6:
                     break;
-                default:
-                    break;
             }
             con.close();
         } catch (Exception e) {
