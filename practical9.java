@@ -51,7 +51,7 @@ public class practical9 {
                 case 3:
                     System.out.println("Enter roll no : ");
                         int disp_rno = Integer.parseInt(br.readLine());
-                        sql = "select * from student2 where rno = " + disp_rno;
+                        sql = "select * from student where rno = " + disp_rno;
                         rs = stmt.executeQuery(sql);
                         while (rs.next()) {
                             System.out.println("=====================================================");
