@@ -16,7 +16,7 @@ public class practical4 extends Applet implements ActionListener, ItemListener {
 
     Label l1, l2, l3, l4;
     TextField t1, t2, t3;
-    String s1, s2, s3;
+    String s1, s2, s3,s4;
     Choice c;
     int n1, n2, n3;
     Button b;
