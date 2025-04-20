@@ -3,7 +3,7 @@ import java.applet.Applet;
 import java.awt.*;
 import java.awt.event.*;
 
-public class practical7 extends Applet implements ActionListener, ItemListener {
+public class practical7 extends Applet implements ItemListener {
 
     String str;
     Choice c;
@@ -24,9 +24,6 @@ public class practical7 extends Applet implements ActionListener, ItemListener {
         add(c);
     }
 
-    public void actionPerformed(ActionEvent e) {
-
-    }
     public void itemStateChanged(ItemEvent e){
       str = c.getSelectedItem();
       repaint();
