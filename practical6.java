@@ -9,19 +9,21 @@ public class practical6 extends Applet implements ActionListener {
     TextField t1, t2;
 
     public void init() {
+        
         l1 = new Label("Username : ");
         l2 = new Label("PassWord");
         b1 = new Button("Log In");
+        
         t1 = new TextField(20);
         t2 = new TextField(20);
         t2.setEchoChar('*');
+        
         add(l1);
         add(l2);
         add(b1);
         add(t1);
         add(t2);
-        t1.addActionListener(this);
-        t2.addActionListener(this);
+        
         b1.addActionListener(this);
 
         setLayout(null);
